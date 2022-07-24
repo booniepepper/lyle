@@ -18,8 +18,8 @@ and later a Commodore 128!)
 
 ### Other notes
 
-This was created for the 2022 [Lang Jam (#0003)](https://github.com/langjam/langjam)
-with the theme "Beautiful Assembly."
+This was started for the 2022 [Lang Jam (#0003)](https://github.com/langjam/langjam)
+with the theme "Beautiful Assembly." It didn't finish in time.
 
 A side quest of J.R. Hill, 2022
 
