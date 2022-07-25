@@ -12,14 +12,16 @@ impl Instruction {
     fn to_bits(self) -> u24 {
         match self {
             Instruction::AbsoluteValue { ar, at } => {
-                u24::from(0b011000000000000100000000) | (ar.as_u24() << 12) | (at.as_u24() << 4)
+                u24::new(0b011000000000000100000000_u32).unwrap()
+                    | (ar.as_u24() << 12)
+                    | (at.as_u24() << 4)
             }
         }
     }
 }
 
 pub struct AddressRegister {
-    bits: u4,
+    pub bits: u4,
 }
 
 impl AddressRegister {
