@@ -1,6 +1,7 @@
 use bit_struct::{u24, u4};
 use core::convert::From;
 
+#[derive(Clone, Copy)]
 pub enum Instruction {
     AbsoluteValue {
         ar: AddressRegister,
@@ -20,6 +21,7 @@ impl Instruction {
     }
 }
 
+#[derive(Clone, Copy)]
 pub struct AddressRegister {
     pub bits: u4,
 }
@@ -27,6 +29,14 @@ pub struct AddressRegister {
 impl AddressRegister {
     fn as_u24(self) -> u24 {
         self.bits.value().into()
+    }
+}
+
+impl From<usize> for AddressRegister {
+    fn from(bits: usize) -> Self {
+        AddressRegister {
+            bits: u4::new(bits.try_into().unwrap()).unwrap(),
+        }
     }
 }
 
