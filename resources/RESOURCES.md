@@ -1,6 +1,7 @@
-Helpful articles:
+Helpful articles/docs:
 
 - https://sachin0x18.github.io/posts/demystifying-xtensa-isa/
+- https://github.com/espressif/xtensa-isa-doc
 
 ---
 
